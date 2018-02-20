@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project 2: Volleyball</string>
+
+    <string name="rulelink">
+        <a href="https://en.wikipedia.org/wiki/Volleyball#Scoring">Rules</a>
+    </string>
+</resources>
