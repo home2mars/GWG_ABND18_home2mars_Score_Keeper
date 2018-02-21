@@ -14,25 +14,24 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int setOneTeamA = 0;
-    int setTwoTeamA = 0;
-    int setThreeTeamA = 0;
-    int setFourTeamA = 0;
-    int setFiveTeamA = 0;
-    String finalTeamA = "";
+    private int scoreTeamA = 0;
+    private int scoreTeamB = 0;
+    private int setNumber = 1;
+    private int setWonByA = 0;
+    private int setWonByB = 0;
 
-    int scoreTeamB = 0;
-    int setOneTeamB = 0;
-    int setTwoTeamB = 0;
-    int setThreeTeamB = 0;
-    int setFourTeamB = 0;
-    int setFiveTeamB = 0;
-    String finalTeamB = "";
-
-    int setNumber = 1;
-    int setWonByA = 0;
-    int setWonByB = 0;
+    private TextView scoreAView;
+    private TextView scoreBView;
+    private TextView setA1;
+    private TextView setB1;
+    private TextView setA2;
+    private TextView setB2;
+    private TextView setA3;
+    private TextView setB3;
+    private TextView setA4;
+    private TextView setB4;
+    private TextView setA5;
+    private TextView setB5;
 
 
     @Override
@@ -44,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
         //https://stackoverflow.com/questions/2734270/how-do-i-make-links-in-a-textview-clickable/45368503#45368503
         TextView getrules =(TextView) findViewById(R.id.getrules);
         getrules.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //View instances
+        scoreAView = (TextView) findViewById(R.id.team_a_score);
+        scoreBView = (TextView) findViewById(R.id.team_b_score);
+        setA1 = (TextView) findViewById(R.id.team_a_set_1);
+        setB1 = (TextView) findViewById(R.id.team_b_set_1);
+        setA2 = (TextView) findViewById(R.id.team_a_set_2);
+        setB2 = (TextView) findViewById(R.id.team_b_set_2);
+        setA3 = (TextView) findViewById(R.id.team_a_set_3);
+        setB3 = (TextView) findViewById(R.id.team_b_set_3);
+        setA4 = (TextView) findViewById(R.id.team_a_set_4);
+        setB4 = (TextView) findViewById(R.id.team_b_set_4);
+        setA5 = (TextView) findViewById(R.id.team_a_set_5);
+        setB5 = (TextView) findViewById(R.id.team_b_set_5);
     }
 
     @Override
@@ -81,8 +94,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreAView.setText(String.valueOf(score));
     }
 
     /**
@@ -98,8 +110,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreBView.setText(String.valueOf(score));
     }
 
     /**
@@ -132,21 +143,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void resetGame() {
         scoreTeamA = 0;
-        setOneTeamA = 0;
-        setTwoTeamA = 0;
-        setThreeTeamA = 0;
-        setFourTeamA = 0;
-        setFiveTeamA = 0;
-        finalTeamA = "";
-
         scoreTeamB = 0;
-        setOneTeamB = 0;
-        setTwoTeamB = 0;
-        setThreeTeamB = 0;
-        setFourTeamB = 0;
-        setFiveTeamB = 0;
-        finalTeamB = "";
-
         setNumber = 1;
         setWonByA = 0;
         setWonByB = 0;
@@ -366,109 +363,80 @@ public class MainActivity extends AppCompatActivity {
      * Displays set 1 scores.
      */
     public void displaySetOneScores(int scoreA, int scoreB) {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_1);
-        setA.setText(String.valueOf(scoreA));
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_1);
-        setB.setText(String.valueOf(scoreB));
+        setA1.setText(String.valueOf(scoreA));
+        setB1.setText(String.valueOf(scoreB));
     }
 
     /**
      * Reset Set 1 scores.
      */
     public void resetSetOneScores() {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_1);
-        setA.setText("");
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_1);
-        setB.setText("");
+        setA1.setText("");
+        setB1.setText("");
     }
 
     /**
      * Displays set 2 scores.
      */
     public void displaySetTwoScores(int scoreA, int scoreB) {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_2);
-        setA.setText(String.valueOf(scoreA));
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_2);
-        setB.setText(String.valueOf(scoreB));
+        setA2.setText(String.valueOf(scoreA));
+        setB2.setText(String.valueOf(scoreB));
     }
 
     /**
      * Reset Set 2 scores.
      */
     public void resetSetTwoScores() {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_2);
-        setA.setText("");
-        TextView setB = (TextView) findViewById(R.id.team_b_set_2);
-        setB.setText("");
+        setA2.setText("");
+        setB2.setText("");
     }
 
     /**
      * Displays set 3 scores.
      */
     public void displaySetThreeScores(int scoreA, int scoreB) {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_3);
-        setA.setText(String.valueOf(scoreA));
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_3);
-        setB.setText(String.valueOf(scoreB));
+        setA3.setText(String.valueOf(scoreA));
+        setB3.setText(String.valueOf(scoreB));
     }
 
     /**
      * Reset Set 3 scores.
      */
     public void resetSetThreeScores() {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_3);
-        setA.setText("");
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_3);
-        setB.setText("");
+        setA3.setText("");
+        setB3.setText("");
     }
 
     /**
      * Displays set 4 scores.
      */
     public void displaySetFourScores(int scoreA, int scoreB) {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_4);
-        setA.setText(String.valueOf(scoreA));
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_4);
-        setB.setText(String.valueOf(scoreB));
+        setA4.setText(String.valueOf(scoreA));
+        setB4.setText(String.valueOf(scoreB));
     }
 
     /**
      * Reset Set 4 scores.
      */
     public void resetSetFourScores() {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_4);
-        setA.setText("");
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_4);
-        setB.setText("");
+        setA4.setText("");
+        setB4.setText("");
     }
 
     /**
      * Displays set 5 scores.
      */
     public void displaySetFiveScores(int scoreA, int scoreB) {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_5);
-        setA.setText(String.valueOf(scoreA));
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_5);
-        setB.setText(String.valueOf(scoreB));
+        setA5.setText(String.valueOf(scoreA));
+        setB5.setText(String.valueOf(scoreB));
     }
 
     /**
      * Reset Set 5 scores.
      */
     public void resetSetFiveScores() {
-        TextView setA = (TextView) findViewById(R.id.team_a_set_5);
-        setA.setText("");
-
-        TextView setB = (TextView) findViewById(R.id.team_b_set_5);
-        setB.setText("");
+        setA5.setText("");
+        setB5.setText("");
     }
 
 
