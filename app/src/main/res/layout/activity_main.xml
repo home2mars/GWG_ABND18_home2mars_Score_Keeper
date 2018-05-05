@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/activity_padding"
     tools:context=".MainActivity">
 
     <!--Scoreboard and Score Display-->
@@ -22,10 +24,10 @@
                 android:layout_alignParentLeft="true"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:padding="16dp"
-                android:text="Scoreboard"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:padding="@dimen/textview_padding"
+                android:text="@string/scoreboard"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/mainTextSize" />
             <TextView
                 android:id="@+id/getrules"
                 android:layout_width="wrap_content"
@@ -33,10 +35,10 @@
                 android:layout_alignParentRight="true"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="@dimen/textview_padding"
                 android:text="@string/rulelink"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/mainTextSize" />
         </RelativeLayout><!--Scoreboard/Rules-->
 
         <!--Sets TableView-->
@@ -48,95 +50,95 @@
             >
             <TableRow>
                 <TextView
-                    android:text="Sets"
+                    android:text="@string/sets"
                     android:layout_column="1"
                     android:layout_span="5"
                     android:textAlignment="center"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
             </TableRow>
             <TableRow>
                 <TextView
                     android:layout_column="1"
                     android:text="1"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:text="2"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:text="3"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:text="4"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:text="5"
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="Team A"
-                    android:paddingLeft="16dp" />
+                    android:text="@string/teamA"
+                    android:paddingLeft="@dimen/textview_padding" />
                 <TextView
                     android:id="@+id/team_a_set_1"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_a_set_2"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_a_set_3"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_a_set_4"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_a_set_5"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_a_final"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
             </TableRow>
             <TableRow>
                 <TextView
-                    android:text="Team B"
-                    android:paddingLeft="16dp" />
+                    android:text="@string/teamB"
+                    android:paddingLeft="@dimen/textview_padding" />
                 <TextView
                     android:id="@+id/team_b_set_1"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_b_set_2"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_b_set_3"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_b_set_4"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_b_set_5"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
                 <TextView
                     android:id="@+id/team_b_final"
                     android:text=""
-                    android:padding="4dp" />
+                    android:padding="@dimen/textview_small_padding" />
             </TableRow>
         </TableLayout><!--Sets TableView-->
 
         <View
             android:layout_height="1dp"
             android:layout_width="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="@dimen/activity_padding"
+            android:layout_marginRight="@dimen/activity_padding"
             android:background="@android:color/darker_gray" />
 
         <!--Score Display-->
@@ -156,10 +158,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:text="Team A"
-                    android:textColor="#616161"
-                    android:textSize="14sp" />
+                    android:padding="@dimen/textview_padding"
+                    android:text="@string/teamA"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="@dimen/mainTextSize" />
 
                 <TextView
                     android:id="@+id/team_a_score"
@@ -167,25 +169,25 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:paddingBottom="24dp"
+                    android:paddingBottom="@dimen/textview_big_padding"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="56sp" />
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/scoreTextSize" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/textview_padding"
+                    android:layout_marginLeft="@dimen/textview_big_padding"
+                    android:layout_marginRight="@dimen/textview_big_padding"
                     android:onClick="addForTeamA"
-                    android:text="Point" />
+                    android:text="@string/point" />
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/activity_padding"
                 android:background="@android:color/darker_gray" />
 
             <LinearLayout
@@ -199,10 +201,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
-                    android:padding="16dp"
-                    android:text="Team B"
-                    android:textColor="#616161"
-                    android:textSize="14sp" />
+                    android:padding="@dimen/textview_padding"
+                    android:text="@string/teamB"
+                    android:textColor="@color/mainTextColor"
+                    android:textSize="@dimen/mainTextSize" />
 
                 <TextView
                     android:id="@+id/team_b_score"
@@ -210,19 +212,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:paddingBottom="24dp"
+                    android:paddingBottom="@dimen/textview_big_padding"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="56sp" />
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/scoreTextSize" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/textview_padding"
+                    android:layout_marginLeft="@dimen/textview_big_padding"
+                    android:layout_marginRight="@dimen/textview_big_padding"
                     android:onClick="addForTeamB"
-                    android:text="Point" />
+                    android:text="@string/point" />
             </LinearLayout>
         </LinearLayout> <!--Score Display-->
 
@@ -230,11 +232,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="24dp"
+            android:padding="@dimen/textview_big_padding"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="20sp"
+            android:textSize="@dimen/announcementTextSize"
             android:id="@+id/announcement"
             android:text=""
             />
@@ -246,7 +248,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/activity_padding"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
@@ -254,13 +256,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="resetSet"
-            android:text="Reset Set" />
+            android:text="@string/resetSet" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="resetGame"
-            android:text="Reset Game" />
+            android:text="@string/resetGame" />
     </LinearLayout><!--Reset Buttons-->
 
 </RelativeLayout>

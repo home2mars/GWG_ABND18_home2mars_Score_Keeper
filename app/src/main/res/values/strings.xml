@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">Project 2: Volleyball</string>
+    <string name="app_name">Score Keeper: Volleyball</string>
 
     <string name="rulelink">
         <a href="https://en.wikipedia.org/wiki/Volleyball#Scoring">Rules</a>
     </string>
+
+    <string name="scoreboard">Scoreboard</string>
+    <string name="sets">Sets</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
+    <string name="point">Point</string>
+    <string name="resetSet">Reset Set</string>
+    <string name="resetGame">Reset Game</string>
+
 </resources>

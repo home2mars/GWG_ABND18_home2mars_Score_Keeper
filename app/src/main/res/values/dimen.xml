@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="textview_padding">8dp</dimen>
+    <dimen name="textview_small_padding">4dp</dimen>
+    <dimen name="textview_big_padding">24dp</dimen>
+
+
+    <dimen name="mainTextSize">14sp</dimen>
+    <dimen name="scoreTextSize">56sp</dimen>
+    <dimen name="announcementTextSize">56sp</dimen>
+
+
+</resources>

@@ -8,6 +8,8 @@
 /captures
 .externalNativeBuild
 
+## Directory-based project format:
+.idea/
 
 
 ###################################
